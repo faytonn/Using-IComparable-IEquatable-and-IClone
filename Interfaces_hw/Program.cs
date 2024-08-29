@@ -4,7 +4,9 @@ List<Car> cars = new List<Car> { new("Toyota Highlander", 150, 200, 100000m), ne
 
 Car ogCar = new("Mitsubishi L200", 150, 210, 68000);
 
-cars.Sort();
+CarComparer carComparer = new CarComparer();
+cars.Sort(carComparer);
+
 
 Console.WriteLine("Here are cars sorted by their name:");
 foreach (Car car in cars)

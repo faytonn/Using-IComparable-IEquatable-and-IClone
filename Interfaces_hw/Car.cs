@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces_hw
 {
-    public class Car : IComparable<Car>, IEquatable<Car>, ICloneable
+    public class Car :  IEquatable<Car>, ICloneable
     {
         public string Name { get; set; }
         public int MaxMph { get; set; }
@@ -32,14 +32,6 @@ namespace Interfaces_hw
             return car;
         }
 
-        public int CompareTo(Car? other)
-        {
-            if (other == null)
-                throw new ArgumentException("Is null");
-
-            return this.Name.CompareTo(other.Name);
-
-        }
 
         public bool Equals(Car? other)
         {
